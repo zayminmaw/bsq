@@ -6,7 +6,7 @@
 /*   By: zayminmaw <zayminmaw@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 21:21:06 by zmin              #+#    #+#             */
-/*   Updated: 2024/12/11 12:36:10 by zayminmaw        ###   ########.fr       */
+/*   Updated: 2024/12/11 12:50:45 by zayminmaw        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,10 @@ int main(int argc, char **argv)
     {
         i = 1;
 		while (i < argc && start(&d, argv[i]))
+        {
+            write(1, "\n", 1);
 			i++;
+        }
 		if (i < argc)
 			return (1);
     }
