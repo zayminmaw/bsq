@@ -6,11 +6,20 @@
 /*   By: zayminmaw <zayminmaw@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 21:21:06 by zmin              #+#    #+#             */
-/*   Updated: 2024/12/10 23:55:31 by zayminmaw        ###   ########.fr       */
+/*   Updated: 2024/12/11 11:27:40 by zayminmaw        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "core.h"
+
+bool	ft_release_mem(t_data *d, unsigned short **matrix, bool ret)
+{
+	if (d->map)
+		free(d->map);
+	if (matrix)
+		free_matrix(matrix, d);
+	return (ret);
+}
 
 bool start(t_data *d, char *file)
 {
@@ -19,11 +28,17 @@ bool start(t_data *d, char *file)
     init_data(d);
     if (!file)
 		if (!read_stdin(d))
-			return (ft_clear(d, NULL, false));
+			return (ft_release_mem(d, NULL, false));
 	else
 		if (!read_file(d, file))
-			return (ft_clear(d, NULL, false));
-    return 1;
+			return (ft_release_mem(d, NULL, false));
+    matrix = init_matrix(d);
+	if (!matrix)
+		return (ft_release_mem(d, NULL, false));
+	if (!process(d, matrix))
+		return (ft_release_mem(d, matrix, false));
+	display_bsq(d, matrix);
+	return (ft_release_mem(d, matrix, true));
 }
 
 int main(int argc, char **argv)
