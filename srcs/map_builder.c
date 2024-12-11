@@ -6,7 +6,7 @@
 /*   By: zayminmaw <zayminmaw@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 21:21:06 by zmin              #+#    #+#             */
-/*   Updated: 2024/12/11 11:27:28 by zayminmaw        ###   ########.fr       */
+/*   Updated: 2024/12/11 12:40:33 by zayminmaw        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ unsigned short	**init_matrix(t_data *d)
 	matrix = malloc(sizeof(unsigned short *) * d->nbr_lines);
 	if (!matrix)
 	{
-		ft_pser("Error: Malloc failed\n");
+		ft_print_error("Error: Malloc failed\n");
 		return (NULL);
 	}
 	i = 0;

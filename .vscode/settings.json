@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    "core.h": "c",
+    "type.h": "c",
+    "read_map.h": "c",
+    "display.h": "c"
+  }
+}

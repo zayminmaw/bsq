@@ -6,7 +6,7 @@
 /*   By: zayminmaw <zayminmaw@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 21:21:06 by zmin              #+#    #+#             */
-/*   Updated: 2024/12/11 11:27:40 by zayminmaw        ###   ########.fr       */
+/*   Updated: 2024/12/11 12:36:10 by zayminmaw        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,21 @@ bool start(t_data *d, char *file)
     
     init_data(d);
     if (!file)
-		if (!read_stdin(d))
+    {
+		if (!read_default(d))
 			return (ft_release_mem(d, NULL, false));
+    }
 	else
+    {
 		if (!read_file(d, file))
 			return (ft_release_mem(d, NULL, false));
+    }
     matrix = init_matrix(d);
 	if (!matrix)
 		return (ft_release_mem(d, NULL, false));
 	if (!process(d, matrix))
 		return (ft_release_mem(d, matrix, false));
-	display_bsq(d, matrix);
+	display(d, matrix);
 	return (ft_release_mem(d, matrix, true));
 }
 

@@ -8,7 +8,7 @@ ROOT_DIRS = ./srcs/
 
 HEAD = ./includes/
 
-SRC = main.c
+SRC = main.c display.c general_utils.c map_builder.c parse_map.c process.c read_map.c
 
 SRCS = ${addprefix ${ROOT_DIRS}, ${SRC}}
 

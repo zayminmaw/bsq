@@ -6,7 +6,7 @@
 /*   By: zayminmaw <zayminmaw@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 21:21:06 by zmin              #+#    #+#             */
-/*   Updated: 2024/12/11 10:42:33 by zayminmaw        ###   ########.fr       */
+/*   Updated: 2024/12/11 12:35:51 by zayminmaw        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,14 @@
 
 # define BUF_SIZE 4096
 # define BIG_BUF_SIZE	100000000
+# include "type.h"
 
 bool	read_map(t_data *d, int fd, size_t buffer_size);
+
+bool	read_big_map(t_data *d, int fd, size_t buffer_size, size_t size);
+
+bool	read_file(t_data *d, char *file);
+
+bool	read_default(t_data *d);
 
 #endif

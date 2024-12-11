@@ -6,7 +6,7 @@
 /*   By: zayminmaw <zayminmaw@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 14:24:39 by zmin              #+#    #+#             */
-/*   Updated: 2024/12/11 11:29:29 by zayminmaw        ###   ########.fr       */
+/*   Updated: 2024/12/11 12:39:55 by zayminmaw        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,15 @@
 # include <stdbool.h>
 # include <stdio.h>
 # include <fcntl.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 # include "read_map.h"
 # include "map_builder.h"
 # include "general_utils.h"
 # include "parse_map.h"
 # include "process.h"
-typedef struct s_data
-{
-	char			*map;
-	char			empty;
-	char			obstacle;
-	char			filler;
-	unsigned int	nbr_lines;
-	unsigned int	len_lines;
-	unsigned int	bsq_x;
-	unsigned int	bsq_y;
-	unsigned long	n;
-	int				fd;
-}					t_data;
+# include "display.h"
+# include "type.h"
 
 #endif

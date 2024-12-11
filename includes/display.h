@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   map_builder.h                                      :+:      :+:    :+:   */
+/*   display.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zayminmaw <zayminmaw@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 21:21:06 by zmin              #+#    #+#             */
-/*   Updated: 2024/12/11 12:36:43 by zayminmaw        ###   ########.fr       */
+/*   Updated: 2024/12/11 12:38:00 by zayminmaw        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MAP_BUILDER_H
-# define MAP_BUILDER_H
+#ifndef DISPLAY_H
+# define DISPLAY_H
 
-void	init_data(t_data *data);
+void	write_map(t_data *d);
 
-unsigned short	**free_matrix_i(unsigned short **matrix, int i);
+void	fill_map(t_data *d, unsigned short **matrix);
 
-void	free_matrix(unsigned short **matrix, t_data *data);
-
-unsigned short	**init_matrix(t_data *d);
+void	display(t_data *d, unsigned short **matrix);
 
 #endif
