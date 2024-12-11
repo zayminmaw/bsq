@@ -6,7 +6,7 @@
 /*   By: zayminmaw <zayminmaw@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 21:21:06 by zmin              #+#    #+#             */
-/*   Updated: 2024/12/11 12:50:45 by zayminmaw        ###   ########.fr       */
+/*   Updated: 2024/12/11 12:55:24 by zayminmaw        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ bool start(t_data *d, char *file)
     init_data(d);
     if (!file)
     {
-		if (!read_default(d))
+		if (!read_stdin(d))
 			return (ft_release_mem(d, NULL, false));
     }
 	else
