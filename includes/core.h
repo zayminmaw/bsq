@@ -6,7 +6,7 @@
 /*   By: zayminmaw <zayminmaw@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 14:24:39 by zmin              #+#    #+#             */
-/*   Updated: 2024/12/11 10:09:45 by zayminmaw        ###   ########.fr       */
+/*   Updated: 2024/12/11 11:10:36 by zayminmaw        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 
 # include "read_map.h"
 # include "map_builder.h"
-# include "general_utils.c"
+# include "general_utils.h"
+# include "parse_map.h"
 typedef struct s_data
 {
 	char			*map;
