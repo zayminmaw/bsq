@@ -6,7 +6,7 @@
 /*   By: zayminmaw <zayminmaw@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 21:21:06 by zmin              #+#    #+#             */
-/*   Updated: 2024/12/11 10:42:39 by zayminmaw        ###   ########.fr       */
+/*   Updated: 2024/12/11 11:12:30 by zayminmaw        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,23 @@ bool	read_default(t_data *d)
 {
 	if (!read_map(d, 0, BIG_BUF_SIZE))
 		return (false);
+	if (!map_arg(d) || !read_len_lines(d))
+		return (false);
+	return (true);
+}
+
+bool	read_file(t_data *d, char *file)
+{
+	d->map = NULL;
+	d->fd = open(file, O_RDONLY);
+	if (d->fd < 0)
+		return (ft_pser("Error: Open failed\n"));
+	if (!read_map(d, d->fd, BIG_BUF_SIZE))
+	{
+		close(d->fd);
+		return (false);
+	}
+	close(d->fd);
 	if (!map_arg(d) || !read_len_lines(d))
 		return (false);
 	return (true);
