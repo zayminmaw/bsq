@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print.h                                            :+:      :+:    :+:   */
+/*   general_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zmin <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: zayminmaw <zayminmaw@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/10 14:33:51 by zmin              #+#    #+#             */
-/*   Updated: 2024/12/10 14:34:40 by zmin             ###   ########.fr       */
+/*   Created: 2024/12/09 21:21:06 by zmin              #+#    #+#             */
+/*   Updated: 2024/12/11 10:09:56 by zayminmaw        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINT_H
-# define PRINT_H
+#ifndef GENERAL_UTILS_H
+# define GENERAL_UTILS_H
 
-void	print(int pos, int max, char *map);
+# include "core.h"
+
+int ft_strlen(char *str);
+
+bool ft_print_error(char *str);
 
 #endif
