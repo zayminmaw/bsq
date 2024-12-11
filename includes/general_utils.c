@@ -6,7 +6,7 @@
 /*   By: zayminmaw <zayminmaw@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 21:21:06 by zmin              #+#    #+#             */
-/*   Updated: 2024/12/11 10:09:56 by zayminmaw        ###   ########.fr       */
+/*   Updated: 2024/12/11 10:15:50 by zayminmaw        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,7 @@
 int ft_strlen(char *str);
 
 bool ft_print_error(char *str);
+
+int	ft_strncpy(char *dst, const char *src, const size_t size);
 
 #endif
