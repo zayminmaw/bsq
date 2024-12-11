@@ -6,12 +6,15 @@
 /*   By: zayminmaw <zayminmaw@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 21:21:06 by zmin              #+#    #+#             */
-/*   Updated: 2024/12/11 11:40:58 by zayminmaw        ###   ########.fr       */
+/*   Updated: 2024/12/11 12:09:46 by zayminmaw        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "core.h"
 
+/*
+* @brief finding the largest squre position by pocessing empty
+*/
 void	process_empty(t_data *d, unsigned short **matrix,
 	unsigned int x, unsigned int y)
 {
@@ -57,6 +60,9 @@ bool	process_end_check(t_data *d,
 	return (true);
 }
 
+/*
+* @brief Iterate over each cell and process.
+*/
 bool	process(t_data *d, unsigned short **matrix)
 {
 	unsigned int	x;
